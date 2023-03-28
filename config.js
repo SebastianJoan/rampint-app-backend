@@ -1,14 +1,14 @@
 module.exports = {
     api:{
-        port:process.env.API_PORT || 8000,
+        port:process.env.API_PORT,
     },
     jwt:{
-        secret: process.env.JWT_SECRET || 'notasecret!',
+        secret: process.env.JWT_SECRET,
     },
     mysql:{
-        host: process.env.MYSQL_HOST || '127.0.0.1',
-        user: process.env.MYSQL_USER || 'root',
-        password: process.env.MYSQL_PASS || '',
-        database: process.env.MYSQL_DB || 'rampint-app',
+        host: process.env.MYSQL_HOST,
+        user: process.env.MYSQL_USER,
+        password: process.env.MYSQL_PASS,
+        database: process.env.MYSQL_DB,
     }
 }
