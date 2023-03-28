@@ -2,21 +2,21 @@ const express      = require('express');
 const cors         = require('cors');
 const bodyParser   = require('body-parser');
 const swaggerUi    = require('swagger-ui-express');
-const config       = require('../config');
-const equipos      = require('./components/equipos/network');
-const gerencias    = require('./components/gerencias/network');
-const proveedores  = require('./components/proveedores/network');
-const servicios    = require('./components/servicios/network');
-const usuarios     = require('./components/usuarios/network');
-const auth         = require('./components/auth/network');
-const errors       = require('../network/errors');
+const config       = require('./config');
+const equipos      = require('./api/components/equipos/network');
+const gerencias    = require('./api/components/gerencias/network');
+const proveedores  = require('./api/components/proveedores/network');
+const servicios    = require('./api/components/servicios/network');
+const usuarios     = require('./api/components/usuarios/network');
+const auth         = require('./api/components/auth/network');
+const errors       = require('./network/errors');
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(cors({origin:'*'}));
 
-const swaggerDoc = require('./swagger.json');
+const swaggerDoc = require('./api/swagger.json');
 
 // ROUTER
 
